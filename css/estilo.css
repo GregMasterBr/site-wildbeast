@@ -109,6 +109,12 @@ img {
 /*ASIDE*/
 .anuncios{
     grid-area: anuncios;
+    background-color: #fafbfc;
+    display: grid;
+    align-content: start;
+    padding: 30px;
+    gap: 30px;
+
 }
 
 /*FOOTER*/
