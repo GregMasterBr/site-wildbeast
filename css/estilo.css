@@ -1,23 +1,66 @@
-*{
+body,p,h1,h2,h3,ul,ul,li{
     margin: 0;
     padding: 0;
 }
+
+ul li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+  
+body{
+    font-family: 'Vollkorn', Georgia, Serif;
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+    border-radius: 5px;
+    display: block;
+}
+
+/*GRID GERAL*/
+
+.estrutura{
+    display: grid;
+    grid-template-columns: minmax(160px,1fr) 3fr 300px;
+    grid-template-areas: 
+        "cabecalho cabecalho cabecalho"
+        "menu-lateral conteudo anuncios "
+        "rodape rodape rodape"
+        ;
+}
+
 .cabecalho{
+    grid-area: cabecalho;
     background: linear-gradient(135deg, #8844ee, #b07dfb);
     padding: 30px;
 }
 .cabecalho .logo img{
     width: 300px;
 }
-ul{
-    list-style: none;
+
+.menu-lateral{
+    grid-area: menu-lateral;
 }
 
 .lista-animais li a img{
     width: 100px;
 }
 
+.conteudo{
+    grid-area: conteudo;
+}
+
+.anuncios{
+    grid-area: anuncios;
+}
+
 .rodape{
+    grid-area: rodape;
     background: linear-gradient(135deg, #8844ee, #b07dfb);
 
 }
