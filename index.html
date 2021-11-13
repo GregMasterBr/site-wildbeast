@@ -7,6 +7,13 @@
     <link href="https://fonts.googleapis.com/css?family=Vollkorn:400,400i,700" rel="stylesheet" />    
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="stylesheet" href="css/estilo.css" />
+    <script>
+      function play(bicho) {
+        var audio = document.getElementById(bicho);
+        audio.play();
+      }
+    </script>
+
   </head>
 
   <body>
@@ -24,13 +31,54 @@
 
         <nav class="menu-lateral sidenav">
             <ul class="lista-animais"> 
-                <li><a href="#"><img src="img/icones/lobo.svg" alt="Lobo" /></a></li>
-                <li><a href="#"><img src="img/icones/cervo.svg" alt="Cervo" /></a></li>
-                <li><a href="#"><img src="img/icones/leao.svg" alt="Leão" /></a></li>
-                <li><a href="#"><img src="img/icones/gato.svg" alt="Gato" /></a></li>
-                <li><a href="#"><img src="img/icones/vaca.svg" alt="Vaca" /></a></li>
-                <li><a href="#"><img src="img/icones/ovelha.svg" alt="Ovelha" /></a></li>
-                <li><a href="#"><img src="img/icones/abelha.svg" alt="Abelha" /></a></li>
+                <li>
+                  <a href="#">
+                    <img src="img/icones/lobo.svg" alt="Lobo" />
+                  </a>
+                </li>
+
+                <li>
+                  <a onclick="play('cervo');">
+                    <img src="img/icones/cervo.svg" alt="Cervo" />
+                    <audio id="cervo" src="img/vaca/som_da_vaca.mp3"></audio>
+                  </a>
+                </li>
+
+                <li>
+                  <a onclick="play('leao');">
+                    <img src="img/icones/leao.svg" alt="Leão" />
+                    <audio id="leao" src="img/gato/som_do_gato.mp3"></audio>
+
+                  </a>
+                </li>
+
+                <li>
+                  <a onclick="play('gato');">
+                    <img src="img/icones/gato.svg" alt="Gato" />
+                    <audio id="gato" src="img/gato/som_do_gato.mp3"></audio>
+                  </a>
+                </li>
+
+                <li>
+                  <a onclick="play('vaca');">
+                    <img src="img/icones/vaca.svg" alt="Vaca" />
+                    <audio id="vaca" src="img/vaca/som_da_vaca.mp3"></audio>
+                  </a>
+                </li>
+
+                <li>
+                  <a onclick="play('ovelha');">
+                    <img src="img/icones/ovelha.svg" alt="Ovelha" />
+                    <audio id="ovelha" src="img/gato/som_do_gato.mp3"></audio>
+                  </a>
+                </li>
+                <li>
+                  <a onclick="play('abelha');">
+                    <img src="img/icones/abelha.svg" alt="Abelha" />
+                    <audio id="abelha" src="img/vaca/som_da_vaca.mp3"></audio>
+
+                  </a>
+                </li>
               </ul>
         </nav>
 

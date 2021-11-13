@@ -93,6 +93,7 @@ img {
     border-radius: 5px;
     box-shadow: 5px 5px 15px  0px rgba(44, 44, 44, 0.15);
     transition: 0.1s ease-out;
+    cursor: pointer;
 }
 .menu-lateral .lista-animais li a:hover {
     background-color: #b07dfb;
@@ -169,8 +170,6 @@ img {
     top: 2px;
 }
   
-
-
 .col-wide {
     /* A coluna vai do 1 até o último, por isso -1, assim pega todas as colunas */
     grid-column: 1 / -1;
@@ -180,8 +179,15 @@ img {
     /* span 2 significa que ess imagem vai ocupar 2 linhas e será alinhada ao final dela sempre. */
     grid-row: span 2;
     align-self: end;
-  }
-  
+}
+
+/* DESTAQUE */
+.destaque {
+    font-size: 0.875em;
+    color: #b07dfb;
+    max-width: 16em;
+}
+
 .imagem-2 {
     align-self: end;
 }
