@@ -26,6 +26,7 @@ img {
 
 .estrutura{
     display: grid;
+    /* Minmax é para definir o mínimo que quero dela, a última eu quero 300px fixo sempre. */
     grid-template-columns: minmax(160px,1fr) 3fr 300px;
     grid-template-areas: 
         "cabecalho cabecalho cabecalho"
@@ -104,6 +105,98 @@ img {
 /*MAIN*/
 .conteudo{
     grid-area: conteudo;
+    max-width: 900px;
+    margin : 0 auto;
+    padding: 30px;
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+
+}
+
+/* TITULO */
+
+.titulo {
+    color: #b07dfb;
+}
+  
+.titulo h1 {
+    font-size: 3.75em;
+    font-weight: 700;
+    line-height: 1;
+}
+  
+.titulo span {
+    font-size: 0.875em;
+    font-style: italic;
+}
+
+/* CARACTERISTICAS */
+
+.caracteristicas {
+    display: flex;
+    align-items: flex-start;
+}
+  
+.caracteristicas > div {
+    width: 80px;
+    text-align: center;
+    box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.15);
+    background: linear-gradient(135deg, #8844ee, #b07dfb);
+    border-radius: 5px;
+    position: relative;
+}
+  
+.caracteristicas > div:first-child {
+    margin-right: 30px;
+}
+
+.caracteristicas span {
+    display: block;
+    color: #b07dfb;
+}
+.numero {
+    font-size: 3em;
+    line-height: 1;
+    margin: 10px auto;
+}
+  
+.rotulo {
+    background: white;
+    border-radius: 0 0 5px 5px;
+    padding: 5px 0;
+    position: relative;
+    top: 2px;
+}
+  
+
+
+.col-wide {
+    /* A coluna vai do 1 até o último, por isso -1, assim pega todas as colunas */
+    grid-column: 1 / -1;
+}
+
+.imagem-1 {
+    /* span 2 significa que ess imagem vai ocupar 2 linhas e será alinhada ao final dela sempre. */
+    grid-row: span 2;
+    align-self: end;
+  }
+  
+.imagem-2 {
+    align-self: end;
+}
+
+/* ESTILOS DO CONTENT */
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    letter-spacing: -0.005em;
+    color: rgba(0, 0, 0, 0.7);
+  }
+  
+.informacoes p + p {
+    margin-top: 30px;
 }
 
 /*ASIDE*/
@@ -113,7 +206,7 @@ img {
     display: grid;
     align-content: start;
     padding: 30px;
-    gap: 30px;
+    grid-gap: 30px;
 
 }
 
@@ -121,7 +214,6 @@ img {
 .rodape{
     grid-area: rodape;
     background: linear-gradient(135deg, #8844ee, #b07dfb);
-
 }
 
 .rodape p{
