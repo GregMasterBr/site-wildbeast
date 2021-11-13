@@ -49,11 +49,8 @@ img {
     max-width: 300px;
 }
 
-.cabecalho .logo img{
+.cabecalho .logo img{}
 
-    
-
-}
 .cabecalho nav ul{
     display: flex;
     flex-wrap: wrap;
@@ -247,7 +244,7 @@ p {
     align-content: start;
     padding: 30px;
     grid-gap: 30px;
-
+    grid-template-columns: repeat(auto-fit,minmax(150px, 1fr));
 }
 
 /*FOOTER*/
@@ -261,3 +258,81 @@ p {
     text-align: center;
     padding: 30px;
 }
+
+@keyframes seta {
+    from {
+      right: 30px;
+    }
+    to {
+      right: 20px;
+    }
+  }
+
+/*Medias Queries*/
+
+@media (max-width: 1200px) {
+    .estrutura {
+      grid-template-areas:
+      "cabecalho cabecalho cabecalho"
+      "menu-lateral conteudo conteudo "
+      "menu-lateral anuncios anuncios "
+      "rodape rodape rodape"
+    }
+}
+
+@media (max-width: 760px) {
+    .estrutura {
+      grid-template-columns: 100%;
+      grid-template-areas:
+        'cabecalho'
+        'menu-lateral'
+        'conteudo'
+        'anuncios'
+        'rodape';
+    }
+
+    .cabecalho {
+        grid-template-columns: auto;
+      }
+      .logo {
+        margin-bottom: 20px;
+      }
+      .cabecalho nav a {
+        font-size: 1em;
+      }
+      .cabecalho nav ul li + li {
+        margin-left: 10px;
+      }
+
+      .menu-lateral {
+        position: relative;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        padding: 0 30px;        
+      }
+      .menu-lateral::after {
+        content: '→';
+        position: absolute;
+        top: 5px;
+        right: 30px;
+        color: rgba(0, 0, 0, 0.3);
+        animation: seta 0.5s ease-in 0s infinite alternate;
+      }
+      .menu-lateral .lista-animais {
+        display: flex;
+        flex-wrap: nowrap;
+      }
+      .menu-lateral .lista-animais li {
+        flex: 1 0 60px;
+      }
+      .menu-lateral .lista-animais li a {
+        margin: 30px 30px 30px 0px;
+      }      
+}
+
+@media (max-width: 600px) {
+    .conteudo {
+      grid-template-columns: auto;
+    }
+  }
